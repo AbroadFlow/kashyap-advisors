@@ -7,6 +7,7 @@ import FeaturesSection from "@/components/FeaturesSection";
 import TestimonialSection from "@/components/TestimonialSection";
 import ContactSection from "@/components/ContactSection";
 import FooterSection from "@/components/FooterSection";
+import B2BPartnershipSection from "@/components/B2BPartnershipSection";
 
 export default function HomePage() {
   return (
@@ -28,6 +29,9 @@ export default function HomePage() {
 
       {/* Features Section - Why choose us */}
       <FeaturesSection />
+
+      {/* B2B Partnership Section - For corporate clients */}
+      <B2BPartnershipSection />
 
       {/* Testimonial Section - Student success stories */}
       <TestimonialSection />

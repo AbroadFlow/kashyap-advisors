@@ -183,86 +183,107 @@ export default function FeaturesSection() {
         </div>
 
         {/* Comprehensive Benefits Section */}
-        <div
-          className={`transform transition-all duration-1000 ease-out delay-500 ${
-            isVisible ? "translate-y-0 opacity-100" : "translate-y-10 opacity-0"
-          }`}
-        >
-          <div className="bg-gradient-to-r from-blue-600 to-purple-600 rounded-3xl p-8 md:p-12 text-white relative overflow-hidden">
-            {/* Background Pattern */}
-            <div className="absolute inset-0 opacity-10">
-              <div
-                className="absolute inset-0"
-                style={{
-                  backgroundImage: `radial-gradient(circle at 20% 50%, rgba(255,255,255,0.2) 0%, transparent 50%),
-                                radial-gradient(circle at 80% 20%, rgba(255,255,255,0.2) 0%, transparent 50%),
-                                radial-gradient(circle at 40% 80%, rgba(255,255,255,0.2) 0%, transparent 50%)`,
-                }}
-              ></div>
-            </div>
+        {/* Comprehensive Benefits Section */}
+<div
+  className={`transform transition-all duration-1000 ease-out delay-500 ${
+    isVisible ? "translate-y-0 opacity-100" : "translate-y-10 opacity-0"
+  }`}
+>
+  <div className="relative rounded-3xl p-8 md:p-12 overflow-hidden bg-white/40 backdrop-blur-xl border border-white/20 shadow-[0_8px_32px_0_rgba(59,130,246,0.2)]">
+    {/* Animated Gradient Background */}
+    <div className="absolute inset-0 bg-gradient-to-br from-blue-500/20 via-purple-500/20 to-pink-500/20 animate-gradient"></div>
+    
+    {/* Decorative Elements */}
+    <div className="absolute top-0 right-0 w-72 h-72 bg-gradient-to-br from-blue-400/30 to-purple-500/30 rounded-full blur-3xl"></div>
+    <div className="absolute bottom-0 left-0 w-96 h-96 bg-gradient-to-tr from-purple-400/30 to-pink-500/30 rounded-full blur-3xl"></div>
+    
+    {/* Geometric Pattern Overlay */}
+    <div className="absolute inset-0 opacity-5">
+      <div className="absolute inset-0" style={{
+        backgroundImage: `
+          linear-gradient(90deg, rgba(59,130,246,0.1) 1px, transparent 1px),
+          linear-gradient(rgba(59,130,246,0.1) 1px, transparent 1px)
+        `,
+        backgroundSize: '60px 60px'
+      }}></div>
+    </div>
 
-            <div className="relative z-10 grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-              {/* Left: Content */}
-              <div>
-                <h3 className="text-3xl md:text-4xl font-bold mb-6">
-                  Complete Support System
-                </h3>
-                <p className="text-xl opacity-90 mb-8 leading-relaxed">
-                  From initial consultation to settling in your new country,
-                  we're with you every step of the way.
-                </p>
-
-                {/* CTA Button */}
-                <a
-                  href="https://tally.so/r/BzEERK"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="inline-flex group bg-white text-blue-600 px-8 py-4 rounded-full font-semibold text-lg transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-1 items-center space-x-2"
-                >
-                  <span>Schedule Free Consultation</span>
-                  <svg
-                    width="20"
-                    height="20"
-                    viewBox="0 0 20 20"
-                    fill="none"
-                    className="group-hover:translate-x-1 transition-transform"
-                  >
-                    <path
-                      d="M7.5 15L12.5 10L7.5 5"
-                      stroke="currentColor"
-                      strokeWidth="2"
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                    />
-                  </svg>
-                </a>
-              </div>
-
-              {/* Right: Benefits List */}
-              <div>
-                <div className="grid grid-cols-1 gap-4">
-                  {benefits.map((benefit, index) => (
-                    <div
-                      key={index}
-                      className="flex items-start space-x-3 opacity-0 animate-fade-in"
-                      style={{
-                        animationDelay: `${index * 100}ms`,
-                        animationFillMode: "forwards",
-                      }}
-                    >
-                      <div className="flex-shrink-0 mt-1">
-                        <CheckCircle size={20} className="text-green-400" />
-                      </div>
-                      <span className="text-white/90 leading-relaxed">
-                        {benefit}
-                      </span>
-                    </div>
-                  ))}
-                </div>
-              </div>
-            </div>
-          </div>
+    <div className="relative z-10 grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+      {/* Left: Content */}
+      <div className="space-y-6">
+        {/* Badge */}
+        <div className="inline-flex items-center space-x-2 bg-gradient-to-r from-blue-600/20 to-purple-600/20 backdrop-blur-sm border border-blue-300/30 px-4 py-2 rounded-full">
+          <div className="w-2 h-2 bg-gradient-to-r from-blue-500 to-purple-500 rounded-full animate-pulse"></div>
+          <span className="text-sm font-semibold bg-gradient-to-r from-blue-700 to-purple-700 bg-clip-text text-transparent">
+            End-to-End Support
+          </span>
         </div>
+
+        <h3 className="text-3xl md:text-5xl font-bold bg-gradient-to-r from-blue-900 via-purple-800 to-blue-900 bg-clip-text text-transparent leading-tight">
+          Complete Support System
+        </h3>
+        
+        <p className="text-lg md:text-xl text-blue-800/80 leading-relaxed">
+          From initial consultation to settling in your new country,
+          we're with you every step of the way with dedicated personal attention.
+        </p>
+
+        {/* CTA Button */}
+        <a
+          href="https://tally.so/r/BzEERK"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="inline-flex group relative items-center space-x-3 "
+        >
+          <div className="relative px-8 py-4 bg-gradient-to-r from-blue-600 to-purple-600 rounded-full font-semibold text-lg transition-all duration-300 shadow-[0_8px_24px_rgba(59,130,246,0.3)] hover:shadow-[0_12px_32px_rgba(59,130,246,0.4)] transform hover:-translate-y-0">
+            <span className="relative z-10 text-white">Schedule Free Consultation</span>
+            <div className="absolute inset-0 bg-gradient-to-r from-purple-600 to-blue-600 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+          </div>
+          <div className="w-12 h-12 rounded-full bg-white shadow-lg flex items-center justify-center group-hover:shadow-xl transition-all duration-300 group-hover:scale-110">
+            <svg
+              width="20"
+              height="20"
+              viewBox="0 0 20 20"
+              fill="none"
+              className="text-blue-600 group-hover:translate-x-1 transition-transform"
+            >
+              <path
+                d="M7.5 15L12.5 10L7.5 5"
+                stroke="currentColor"
+                strokeWidth="2"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+              />
+            </svg>
+          </div>
+        </a>
+      </div>
+
+      {/* Right: Benefits List */}
+      <div className="space-y-3">
+        {benefits.map((benefit, index) => (
+          <div
+            key={index}
+            className="flex items-start space-x-4 p-4 rounded-2xl bg-white/50 backdrop-blur-sm border border-white/30 shadow-[0_4px_16px_rgba(59,130,246,0.1)] hover:shadow-[0_8px_24px_rgba(59,130,246,0.15)] transition-all duration-300 hover:scale-[1.02] opacity-0 animate-fade-in group/item"
+            style={{
+              animationDelay: `${index * 100}ms`,
+              animationFillMode: "forwards",
+            }}
+          >
+            <div className="flex-shrink-0 mt-0.5">
+              <div className="w-6 h-6 rounded-full bg-gradient-to-br from-green-400 to-emerald-500 flex items-center justify-center shadow-lg group-hover/item:scale-110 transition-transform duration-300">
+                <CheckCircle size={16} className="text-white" strokeWidth={3} />
+              </div>
+            </div>
+            <span className="text-blue-900 font-medium leading-relaxed">
+              {benefit}
+            </span>
+          </div>
+        ))}
+      </div>
+    </div>
+  </div>
+</div>
 
         {/* Stats Section */}
         <div
@@ -275,7 +296,7 @@ export default function FeaturesSection() {
               { number: "200+", label: "Success Stories" },
               { number: "2+", label: "Years Experience" },
               { number: "100%", label: "Visa Success" },
-              { number: "4", label: "Countries" },
+              { number: "10+", label: "Countries" },
             ].map((stat, index) => (
               <div key={index} className="text-center">
                 <div className="text-4xl md:text-5xl font-bold text-blue-900 mb-2">

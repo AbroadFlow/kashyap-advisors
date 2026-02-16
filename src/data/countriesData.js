@@ -15,6 +15,7 @@ import maltaFlag from "@/assets/flags/mt.webp";
 import netherlandFlag from "@/assets/flags/nl.webp";
 
 export const countriesData = {
+  
   italy: {
     name: "Italy",
     flag: italyFlag,
@@ -76,6 +77,7 @@ export const countriesData = {
     color: "from-green-500 to-red-500",
     bgColor: "bg-green-50",
   },
+
   malta: {
     name: "Malta",
     flag: maltaFlag,
@@ -136,9 +138,10 @@ export const countriesData = {
     color: "from-blue-500 to-yellow-500",
     bgColor: "bg-blue-50",
   },
+
   georgia: {
     name: "Georgia",
-    flag: germanyFlag,
+    flag: georgiaFlag,
     tagline: "Where East Meets West",
     image: georgiaImg,
     description:
@@ -196,6 +199,7 @@ export const countriesData = {
     color: "from-red-500 to-blue-500",
     bgColor: "bg-purple-50",
   },
+
   uk: {
     name: "UK",
     flag: ukFlag,
@@ -260,6 +264,7 @@ export const countriesData = {
     color: "from-blue-800 to-red-400",
     bgColor: "bg-gray-50",
   },
+  
   netherlands: {
     name: "Netherlands",
     flag: netherlandFlag,

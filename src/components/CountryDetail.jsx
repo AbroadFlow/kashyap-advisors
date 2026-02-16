@@ -19,6 +19,7 @@ import {
   ArrowRight,
 } from "lucide-react";
 import { countriesData } from "../data/countriesData";
+import FooterSection from "@/components/FooterSection";
 
 export default function CountryDetail() {
   const { country } = useParams();
@@ -47,7 +48,7 @@ export default function CountryDetail() {
           }
         });
       },
-      { threshold: 0.1 }
+      { threshold: 0.1 },
     );
 
     document.querySelectorAll("[id^='animate-']").forEach((el) => {
@@ -59,8 +60,8 @@ export default function CountryDetail() {
 
   if (!countryData) {
     return (
-      <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-blue-50 to-indigo-100">
-        <div className="text-center p-8">
+      <div className="min-h-screen  flex items-center justify-center bg-gradient-to-br from-blue-50 to-indigo-100">
+        <div className=" text-center p-8">
           <div className="w-32 h-32 mx-auto mb-6 bg-gradient-to-br from-blue-500 to-indigo-600 rounded-full flex items-center justify-center">
             <Globe className="w-16 h-16 text-white" />
           </div>
@@ -128,9 +129,10 @@ export default function CountryDetail() {
   ];
 
   return (
-    <div className="min-h-screen bg-gradient-to-b from-gray-50 to-white">
+    <div className="min-h-screen   bg-gradient-to-b from-gray-50 to-white">
+      
       {/* Parallax Hero Section */}
-      <div className="relative h-screen overflow-hidden">
+      <div className="  relative h-screen overflow-hidden">
         {/* Background Image with Parallax */}
         <div
           className="absolute inset-0 w-full h-full"
@@ -160,7 +162,7 @@ export default function CountryDetail() {
                 <img
                   src={countryData.flag}
                   alt={`${countryData.name} flag`}
-                  className="relative w-32 h-32 md:w-40 md:h-40 object-contain rounded-2xl shadow-2xl ring-4 ring-white/50 transform hover:scale-110 transition-transform duration-300"
+                  className="relative w-32 h-32 md:w-40 md:h-40 object-contain rounded-2xl shadow-2xl  transform hover:scale-110 transition-transform duration-300"
                 />
               </div>
             </div>
@@ -232,7 +234,7 @@ export default function CountryDetail() {
                 >
                   <stat.icon className="w-6 h-6 text-white" />
                 </div>
-                <div className="text-2xl md:text-3xl font-bold text-gray-900 mb-1 text-center">
+                <div className="text-l md:text-l font-bold text-gray-900 mb-1 text-center">
                   {stat.value}
                 </div>
                 <div className="text-xs md:text-sm text-gray-600 text-center">
@@ -245,7 +247,7 @@ export default function CountryDetail() {
       </div>
 
       {/* Main Content */}
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
+      <div className="max-w-7xl  px-4 sm:px-6 lg:px-8 py-20">
         {/* About Section with Side Image */}
         <div
           id="animate-about"
@@ -311,13 +313,13 @@ export default function CountryDetail() {
         {/* Tabbed Section */}
         <div
           id="animate-tabs"
-          className={`mb-24 transform transition-all duration-1000 ${
+          className={`mb-2 transform transition-all duration-1000 ${
             isVisible["animate-tabs"]
               ? "translate-y-0 opacity-100"
               : "translate-y-10 opacity-0"
           }`}
         >
-          {/* Tab Headers */}
+          {/* Tab Headers :  [top countries and popular courses  ] */}
           <div className="flex flex-wrap gap-4 mb-8 justify-center">
             <button
               onClick={() => setActiveTab("universities")}
@@ -347,7 +349,7 @@ export default function CountryDetail() {
             </button>
           </div>
 
-          {/* Tab Content */}
+          {/* Tab Content: University/ popular course list */}
           <div className="bg-white rounded-3xl p-8 md:p-12 shadow-xl border border-gray-100">
             {activeTab === "universities" && (
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
@@ -399,65 +401,11 @@ export default function CountryDetail() {
         </div>
 
         {/* CTA Section */}
-        <div
-          id="animate-cta"
-          className={`transform transition-all duration-1000 ${
-            isVisible["animate-cta"]
-              ? "scale-100 opacity-100"
-              : "scale-95 opacity-0"
-          }`}
-        >
-          <div className="relative overflow-hidden bg-gradient-to-br from-blue-600 via-indigo-600 to-purple-600 rounded-3xl p-12 md:p-16 text-white">
-            {/* Animated Background Pattern */}
-            <div className="absolute inset-0 opacity-10">
-              <div className="absolute top-0 left-0 w-96 h-96 bg-white rounded-full blur-3xl animate-pulse"></div>
-              <div className="absolute bottom-0 right-0 w-96 h-96 bg-white rounded-full blur-3xl animate-pulse delay-1000"></div>
-            </div>
-
-            <div className="relative z-10 text-center max-w-4xl mx-auto">
-              <div className="inline-flex items-center space-x-2 bg-white/20 backdrop-blur-sm px-6 py-3 rounded-full mb-6">
-                <Sparkles className="w-5 h-5" />
-                <span className="font-semibold">Start Your Journey</span>
-              </div>
-
-              <h3 className="text-4xl md:text-5xl font-bold mb-6">
-                Ready to Study in {countryData.name}?
-              </h3>
-              <p className="text-xl md:text-2xl mb-10 text-blue-100">
-                Get personalized guidance from our expert counselors and turn
-                your dreams into reality
-              </p>
-
-              <div className="flex flex-col sm:flex-row gap-6 justify-center">
-                <button className="group bg-white text-blue-600 hover:bg-gray-100 font-bold px-10 py-5 rounded-2xl transition-all duration-300 transform hover:scale-105 shadow-2xl flex items-center justify-center space-x-2">
-                  <span className="text-lg">Get Free Consultation</span>
-                  <ArrowRight className="group-hover:translate-x-1 transition-transform" />
-                </button>
-                <button className="group bg-transparent border-3 border-white text-white hover:bg-white hover:text-blue-600 font-bold px-10 py-5 rounded-2xl transition-all duration-300 transform hover:scale-105 flex items-center justify-center space-x-2">
-                  <BookOpen size={20} />
-                  <span className="text-lg">Download Brochure</span>
-                </button>
-              </div>
-
-              {/* Trust Indicators */}
-              <div className="mt-12 flex flex-wrap justify-center gap-8 text-sm">
-                <div className="flex items-center space-x-2">
-                  <CheckCircle2 className="w-5 h-5" />
-                  <span>200+ Students Placed</span>
-                </div>
-                <div className="flex items-center space-x-2">
-                  <CheckCircle2 className="w-5 h-5" />
-                  <span>100% Visa Success</span>
-                </div>
-                <div className="flex items-center space-x-2">
-                  <CheckCircle2 className="w-5 h-5" />
-                  <span>Expert Counselors</span>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
+        
       </div>
+      
+      {/* Footer */}
+      <FooterSection />
     </div>
   );
 }

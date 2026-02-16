@@ -113,12 +113,11 @@ export default function HeroSection() {
                   "UK",
                   "Germany",
                   "Cyprus",
-                  "Netherland",
+                  "Netherlands",
                 ]}
                 interval={2500}
                 animationDuration={600}
-                className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-blue-800"
-                textClassName="font-['Molle']"
+                textClassName="text-blue bg-clip-text bg-gradient-to-r from-blue-600 to-blue-800 font-['Molle']"
               />
             </h1>
 
@@ -280,18 +279,15 @@ export default function HeroSection() {
               </div>
             </div>
           </div>
-
         </div>
       </div>
 
       {/* Floating Vertical Brand Text */}
-<div className="hidden lg:block absolute -left-24 top-1/2 -translate-y-1/2 z-30">
-  <div className="rotate-[-90deg] origin-center w-[650px]">
-    <TextHoverEffect text="KASHYAP ADVISORS" />
-  </div>
-</div>
-
-
+      <div className=" hidden lg:block absolute left-1/4 top-10 -translate-y-1/2 z-30">
+        <div className="rotate-[0deg] origin-center w-[650px]">
+          <TextHoverEffect text="KASHYAP ADVISORS" />
+        </div>
+      </div>
     </section>
   );
 }

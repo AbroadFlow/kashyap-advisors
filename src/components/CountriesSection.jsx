@@ -34,10 +34,8 @@ import italyFlag from "@/assets/flags/it.webp";
 import maltaFlag from "@/assets/flags/mt.webp";
 import netherlandFlag from "@/assets/flags/nl.webp";
 
-
-// react bits 
+// react bits
 import CurvedLoop from "@/components/ui/CurvedLoop";
-
 
 export default function CountriesSection() {
   const [activeCountry, setActiveCountry] = useState(0);
@@ -236,14 +234,14 @@ export default function CountriesSection() {
       className="py-24 bg-gradient-to-b from-blue-50 to-white relative overflow-hidden"
     >
       {/* React bits :  */}
-      <div className="mb-16">
-  <CurvedLoop
-    marqueeText="Contact ✦ Kashyap ✦ Advisors ✦"
-    speed={1.5}
-    curveAmount={300}
-    className="fill-blue-600"
-  />
-</div>
+      <div className=" absolute inset-x-0 -bottom-40 ">
+        <CurvedLoop
+          marqueeText="Kashyap Advisors"
+          speed={1.5}
+          curveAmount={300}
+          className="stroke-blue-600 stroke-[2]"
+        />
+      </div>
       {/* Decorative Elements */}
       <div className="absolute inset-0">
         <div className="absolute top-32 right-20 w-64 h-64 bg-blue-200 rounded-full opacity-10 blur-3xl"></div>
@@ -488,7 +486,7 @@ export default function CountriesSection() {
                 <div className="bg-white rounded-2xl p-4 md:p-6 shadow-[4px_4px_8px_rgba(59,130,246,0.1),-4px_-4px_8px_rgba(255,255,255,0.9)]">
                   <div className="w-10 h-10 md:w-12 md:h-12 bg-purple-100 rounded-xl flex items-center justify-center mb-3 md:mb-4">
                     <Clock
-                      size={20}
+                    size={20}
                       className="md:w-6 md:h-6 text-purple-600"
                     />
                   </div>

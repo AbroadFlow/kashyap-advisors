@@ -12,7 +12,7 @@ import {
   MessageSquare,
   AlertCircle,
 } from "lucide-react";
-import toast from 'react-hot-toast';
+import toast from "react-hot-toast";
 
 export default function ContactSection() {
   const [formData, setFormData] = useState({
@@ -30,7 +30,7 @@ export default function ContactSection() {
   const sectionRef = useRef(null);
 
   // Your Django backend URL
-  const API_URL = "http://localhost:8000/api/contact/submit/"; 
+  const API_URL = "http://localhost:8000/api/contact/submit/";
 
   useEffect(() => {
     const observer = new IntersectionObserver(
@@ -66,9 +66,9 @@ export default function ContactSection() {
 
     try {
       const response = await fetch(API_URL, {
-        method: 'POST',
+        method: "POST",
         headers: {
-          'Content-Type': 'application/json',
+          "Content-Type": "application/json",
         },
         body: JSON.stringify(formData),
       });
@@ -77,8 +77,10 @@ export default function ContactSection() {
 
       if (response.ok && data.success) {
         setIsSubmitted(true);
-        toast.success('Message sent successfully! We\'ll contact you within 24 hours.');
-        
+        toast.success(
+          "Message sent successfully! We'll contact you within 24 hours.",
+        );
+
         // Reset form
         setFormData({
           name: "",
@@ -95,13 +97,15 @@ export default function ContactSection() {
         }, 5000);
       } else {
         // Handle validation errors
-        const errorMessage = data.message || 'Something went wrong. Please try again.';
+        const errorMessage =
+          data.message || "Something went wrong. Please try again.";
         setError(errorMessage);
         toast.error(errorMessage);
       }
     } catch (err) {
-      console.error('Submission error:', err);
-      const errorMsg = 'Network error. Please check your connection and try again.';
+      console.error("Submission error:", err);
+      const errorMsg =
+        "Network error. Please check your connection and try again.";
       setError(errorMsg);
       toast.error(errorMsg);
     } finally {
@@ -113,7 +117,7 @@ export default function ContactSection() {
     {
       icon: Phone,
       title: "Call Us",
-      details: ["+977 9817837421", "+977 9844439705"],
+      details: ["+977 01-4971745", "+977 01-4971745"],
       color: "bg-green-500",
       lightColor: "bg-green-50",
       borderColor: "border-green-200",
@@ -144,7 +148,15 @@ export default function ContactSection() {
     },
   ];
 
-  const countries = ["Italy", "Malta", "Georgia", "UK", "Netherlands", "Germany", "Cyprus"];
+  const countries = [
+    "Italy",
+    "Malta",
+    "Georgia",
+    "UK",
+    "Netherlands",
+    "Germany",
+    "Cyprus",
+  ];
   const courses = [
     "Computer Science",
     "Engineering",
@@ -247,19 +259,34 @@ export default function ContactSection() {
               })}
 
               {/* Quick CTA */}
-              <div className="bg-gradient-to-r from-blue-600 to-purple-600 rounded-2xl p-6 text-white mt-8">
-                <h4 className="text-lg font-bold mb-3">
-                  Need Immediate Assistance?
-                </h4>
-                <p className="text-blue-100 text-sm mb-4">
-                  Call us now for urgent queries or emergency support.
-                </p>
-                <a 
-                  href="tel:+9779844439705"
-                  className="block text-center bg-white text-blue-600 px-6 py-2 rounded-full font-semibold hover:bg-blue-50 transition-colors duration-300 text-sm"
-                >
-                  Call Now: +977 9844439705
-                </a>
+              <div className="relative overflow-hidden bg-gradient-to-br from-blue-600 to-blue-700 hover:shadow-xl hover:shadow-blue-500/20 rounded-2xl p-6 text-white mt-8 transition-all duration-300 group">
+                {/* Decorative elements */}
+                <div className="absolute top-0 right-0 w-32 h-32 bg-blue-500/20 rounded-full blur-3xl -mr-16 -mt-16"></div>
+                <div className="absolute bottom-0 left-0 w-24 h-24 bg-orange-200/10 rounded-full blur-2xl -ml-12 -mb-12"></div>
+
+                <div className="relative z-10">
+                  <h4 className="text-xl font-bold mb-2">
+                    Need Immediate Assistance?
+                  </h4>
+                  <p className="text-blue-100 text-sm mb-6 leading-relaxed">
+                    Our support team is ready to help you with urgent queries or
+                    emergency support.
+                  </p>
+
+                  <a
+                    href="tel:+9779709029676"
+                    className="inline-flex items-center justify-center gap-2 w-full bg-white text-blue-600 px-6 py-3 rounded-xl font-semibold hover:bg-orange-50 hover:scale-[1.02] active:scale-[0.98] transition-all duration-300 shadow-lg shadow-blue-900/20 text-sm"
+                  >
+                    <svg
+                      className="w-5 h-5"
+                      fill="currentColor"
+                      viewBox="0 0 20 20"
+                    >
+                      <path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z" />
+                    </svg>
+                    Call Now: +977 9709029676
+                  </a>
+                </div>
               </div>
             </div>
           </div>
@@ -464,7 +491,7 @@ export default function ContactSection() {
                       ${
                         isSubmitting
                           ? "bg-blue-400 cursor-not-allowed"
-                          : "bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 shadow-lg hover:shadow-xl transform hover:-translate-y-1"
+                          : "bg-blue-600 hover:bg-blue-700 shadow-lg hover:shadow-xl transform hover:-translate-y-1"
                       }
                       text-white flex items-center justify-center space-x-2
                     `}

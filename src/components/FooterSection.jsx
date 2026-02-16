@@ -64,7 +64,6 @@ export default function FooterSection() {
   ];
 
 
-
   const socialLinks = [
     { icon: Facebook, href: "https://www.facebook.com/KashyapAdvisors", color: "hover:bg-blue-600" },
     // { icon: Twitter, href: "#", color: "hover:bg-blue-400" },
@@ -73,7 +72,8 @@ export default function FooterSection() {
   ];
 
   return (
-    <footer className="bg-gradient-to-br from-blue-900 via-blue-800 to-blue-900 text-white relative overflow-hidden">
+    <footer className=" bg-gradient-to-br from-blue-900 via-blue-800 to-blue-900 text-white relative overflow-hidden">
+      
       {/* Background Pattern */}
       <div className="absolute inset-0 opacity-10">
         <div
@@ -91,22 +91,24 @@ export default function FooterSection() {
       </div>
 
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        
         {/* Main Footer Content */}
-        <div className="py-16">
-          <div className="grid grid-cols-1 lg:grid-cols-12 gap-12">
+        <div className="py-10">
+          <div className="grid grid-cols-1 lg:grid-cols-12  gap-12 items-center">
+            
             {/* Company Info */}
-            <div className="lg:col-span-6">
-              <div className="flex items-center mb-6">
+            <div className="col-span-1 lg:col-span-6 lg:col-start-4 mx-auto  mx-auto flex flex-col items-center text-center">
+              <div className="flex flex-col items-center mb-6">
                 <div className="flex-shrink-0">
               <img
                 src="/kasyap_advisors.png"
                 alt="Kashyap Advisors Logo"
-                className="h-22 w-22 rounded-lg object-cover"
+                className="h-30 w-30 rounded-lg object-cover"
                 loading="lazy"
               />
             </div>
                 <div>
-                  <h3 className="text-2xl font-bold">Kashyap Advisors</h3>
+                  <h3 className="text-xl font-bold">Kashyap Advisors</h3>
                   <p className="text-blue-200 text-sm">
                     Your Gateway to Global Education
                   </p>
@@ -121,10 +123,10 @@ export default function FooterSection() {
               </p>
 
               {/* Contact Info */}
-              <div className="space-y-3">
-                <div className="flex items-center space-x-3">
+              <div className="space-y-3 flex flex-col items-center">
+                <div className="flex items-center text-center space-x-3">
                   <Phone size={18} className="text-blue-300" />
-                  <span className="text-blue-100">+977 9844439705</span>
+                  <span className="text-blue-100">+977 01-4971745</span>
                 </div>
                 <div className="flex items-center space-x-3">
                   <Mail size={18} className="text-blue-300" />
@@ -142,7 +144,7 @@ export default function FooterSection() {
             </div>
 
             {/* Quick Links */}
-            <div className="lg:col-span-2">
+            {/* <div className="lg:col-span-2">
               <h4 className="text-lg font-bold mb-6 text-white">Quick Links</h4>
               <ul className="space-y-3">
                 {quickLinks.map((link, index) => (
@@ -162,10 +164,10 @@ export default function FooterSection() {
                   </li>
                 ))}
               </ul>
-            </div>
+            </div> */}
 
             {/* Services */}
-            <div className="lg:col-span-2">
+            {/* <div className="lg:col-span-2">
               <h4 className="text-lg font-bold mb-6 text-white">
                 Our Services
               </h4>
@@ -187,10 +189,10 @@ export default function FooterSection() {
                   </li>
                 ))}
               </ul>
-            </div>
+            </div> */}
 
             {/* Countries */}
-            <div className="lg:col-span-2">
+            {/* <div className="lg:col-span-2">
               <h4 className="text-lg font-bold mb-6 text-white">
                 Destinations
               </h4>
@@ -212,7 +214,7 @@ export default function FooterSection() {
                   </li>
                 ))}
               </ul>
-            </div>
+            </div> */}
 
             
             
@@ -223,24 +225,14 @@ export default function FooterSection() {
         <div className="border-t border-blue-700 py-12">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
             
-            {/* <div>
+            <div>
               <h4 className="text-2xl font-bold mb-4">Stay Updated</h4>
               <p className="text-blue-200 mb-6">
                 Subscribe to our newsletter for the latest updates on university
                 admissions, visa requirements, and study abroad opportunities.
               </p>
+              {/* subscribe */}
               <div className="flex flex-col sm:flex-row gap-4 max-w-md">
-                <input
-                  type="email"
-                  placeholder="Enter your email address"
-                  className="flex-1 px-4 py-3 rounded-lg bg-blue-800 border border-blue-600 text-white placeholder-blue-300 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
-                />
-                <button className="bg-white text-blue-900 px-6 py-3 rounded-lg font-semibold hover:bg-blue-50 transition-colors duration-200 whitespace-nowrap">
-                  Subscribe
-                </button>
-              </div>
-            </div> */}
-            <div className="flex flex-col sm:flex-row gap-4 max-w-md">
                 <input
                     type="email"
                     value={email}
@@ -255,6 +247,8 @@ export default function FooterSection() {
                     Subscribe
                 </button>
                 </div>
+            </div>
+            
 
             {/* Awards/Certifications */}
             <div className="text-center lg:text-right">
@@ -285,7 +279,7 @@ export default function FooterSection() {
 
         {/* Bottom Footer */}
         <div className="border-t border-blue-700 py-8">
-          <div className="flex flex-col lg:flex-row justify-between items-center space-y-4 lg:space-y-0">
+          <div className="flex flex-col lg:flex-row justify-between items-center space-y-0 lg:space-y-0">
             {/* Copyright */}
             <div className="text-center lg:text-left">
               <p className="text-blue-200">
@@ -293,14 +287,14 @@ export default function FooterSection() {
                 <span className="ml-1">
                   <a
                     href="#"
-                    className="hover:text-white transition-colors duration-200"
+                    className="hover:text-white hover:underline transition-colors duration-200"
                   >
                     Privacy Policy
                   </a>{" "}
                   |
                   <a
                     href="#"
-                    className="ml-1 hover:text-white transition-colors duration-200"
+                    className="ml-1 hover:text-white hover:underline transition-colors duration-200"
                   >
                     Terms & Conditions
                   </a>
@@ -332,7 +326,7 @@ export default function FooterSection() {
         </div>
 
         {/* Final CTA */}
-        <div className="border-t border-blue-700 pt-8 pb-4">
+        {/* <div className="border-t border-blue-700 pt-8 pb-4">
           <div className="text-center">
             <p className="text-blue-200 text-sm mb-4">
               Ready to start your journey abroad? Contact us today for a free
@@ -346,7 +340,7 @@ export default function FooterSection() {
               <ArrowRight size={18} />
             </a>
           </div>
-        </div>
+        </div> */}
       </div>
     </footer>
   );
