@@ -5,6 +5,7 @@ import maltaImg from "@/assets/malta.avif";
 import netherlandImg from "@/assets/netherlands.webp";
 import germanyImg from "@/assets/germany.avif";
 import cyprusImg from "@/assets/cyprus.avif";
+import austriaImg from "@/assets/austria.avif";
 
 import cyprusFlag from "@/assets/flags/cy.webp";
 import germanyFlag from "@/assets/flags/de.webp";
@@ -13,9 +14,10 @@ import georgiaFlag from "@/assets/flags/ge.webp";
 import italyFlag from "@/assets/flags/it.webp";
 import maltaFlag from "@/assets/flags/mt.webp";
 import netherlandFlag from "@/assets/flags/nl.webp";
+import austriaFlag from "@/assets/flags/at.webp";
 
 export const countriesData = {
-  
+
   italy: {
     name: "Italy",
     flag: italyFlag,
@@ -264,7 +266,7 @@ export const countriesData = {
     color: "from-blue-800 to-red-400",
     bgColor: "bg-gray-50",
   },
-  
+
   netherlands: {
     name: "Netherlands",
     flag: netherlandFlag,
@@ -451,4 +453,66 @@ export const countriesData = {
     color: "from-orange-400 to-blue-500",
     bgColor: "bg-orange-50",
   },
+
+  austria: {
+    name: "Austria",
+    flag: austriaFlag,
+    tagline: "High-quality education in the heart of Europe",
+    image: austriaImg,
+    description:
+      "Austria offers world-class education with strong research opportunities in a safe and culturally rich European environment. Enjoy programs in English and German, and explore a country known for its history, music, and innovation.",
+    highlights: [
+      "Free Education",
+      "High Visa Success Rate",
+      "Part Time Work Allowed"
+    ],
+    stats: {
+      universities: "20+",
+      cost: "€1,500–€4,000/year",
+      duration: "3–4 years (UG), 1–2 years (PG)",
+      scholarships: "Scholarship Available",
+      students: "70,000+ International",
+      language: "German/English",
+    },
+    topUniversities: [
+      "University of Vienna",
+      "Graz University of Technology",
+      "Vienna University of Economics and Business",
+      "University of Innsbruck",
+    ],
+    popularCourses: [
+      "Business & Management",
+      "Engineering",
+      "Computer Science",
+      "Tourism & Hospitality",
+      "Arts & Music",
+    ],
+    requiredDocuments: [
+      "Valid passport",
+      "Academic transcripts",
+      "Previous qualification certificates",
+      "CV / Resume",
+      "Statement of Purpose",
+      "English or German proficiency certificate",
+      "Bank statements",
+      "Medical certificate",
+    ],
+
+    academicRequirements: {
+      undergraduate: [
+        "Minimum 50–60% in high school",
+        "IELTS 6.0+ or equivalent / German B2 for German-taught programs",
+        "Relevant academic background",
+      ],
+      postgraduate: [
+        "Bachelor degree with minimum 55%",
+        "IELTS 6.5+ or equivalent / German B2",
+        "Relevant discipline",
+      ],
+    },
+
+    color: "from-red-400 to-white-500",
+    bgColor: "bg-red-50",
+  },
+
 };

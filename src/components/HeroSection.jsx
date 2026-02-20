@@ -9,6 +9,7 @@ import maltaImg from "@/assets/malta.avif";
 import netherlandImg from "@/assets/netherlands.webp";
 import germanyImg from "@/assets/germany.avif";
 import cyprusImg from "@/assets/cyprus.avif";
+import austriaImg from "@/assets/austria.avif";
 
 import { ContainerTextFlip } from "@/components/ui/container-text-flip";
 import { TextHoverEffect } from "@/components/ui/text-hover-effect";
@@ -53,6 +54,11 @@ export default function HeroSection() {
       src: cyprusImg,
       alt: "Cyprus Image",
       country: "Cyprus",
+    },
+    {
+      src: austriaImg,
+      alt: "Austria Image",
+      country: "Austria",
     },
   ];
 
@@ -114,6 +120,7 @@ export default function HeroSection() {
                   "Germany",
                   "Cyprus",
                   "Netherlands",
+                  "Austria"
                 ]}
                 interval={2500}
                 animationDuration={600}
@@ -214,11 +221,10 @@ export default function HeroSection() {
                     key={index}
                     src={image.src}
                     alt={image.alt}
-                    className={`w-full h-full object-cover absolute inset-0 transition-opacity duration-1000 ${
-                      index === currentImageIndex
-                        ? "opacity-100 z-[1]"
-                        : "opacity-0 z-0"
-                    }`}
+                    className={`w-full h-full object-cover absolute inset-0 transition-opacity duration-1000 ${index === currentImageIndex
+                      ? "opacity-100 z-[1]"
+                      : "opacity-0 z-0"
+                      }`}
                   />
                 ))}
 
@@ -238,11 +244,10 @@ export default function HeroSection() {
                     <button
                       key={index}
                       onClick={() => setCurrentImageIndex(index)}
-                      className={`w-2 h-2 rounded-full transition-all duration-300 ${
-                        index === currentImageIndex
-                          ? "bg-white w-8"
-                          : "bg-white/50 hover:bg-white/75"
-                      }`}
+                      className={`w-2 h-2 rounded-full transition-all duration-300 ${index === currentImageIndex
+                        ? "bg-white w-8"
+                        : "bg-white/50 hover:bg-white/75"
+                        }`}
                       aria-label={`Go to image ${index + 1}`}
                     />
                   ))}

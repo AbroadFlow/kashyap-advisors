@@ -25,6 +25,7 @@ import maltaImg from "@/assets/malta.avif";
 import netherlandImg from "@/assets/netherlands.webp";
 import germanyImg from "@/assets/germany.avif";
 import cyprusImg from "@/assets/cyprus.avif";
+import austriaImg from "@/assets/austria.avif";
 
 import cyprusFlag from "@/assets/flags/cy.webp";
 import germanyFlag from "@/assets/flags/de.webp";
@@ -33,6 +34,7 @@ import georgiaFlag from "@/assets/flags/ge.webp";
 import italyFlag from "@/assets/flags/it.webp";
 import maltaFlag from "@/assets/flags/mt.webp";
 import netherlandFlag from "@/assets/flags/nl.webp";
+import austriaFlag from "@/assets/flags/at.webp";
 
 // react bits
 import CurvedLoop from "@/components/ui/CurvedLoop";
@@ -216,6 +218,28 @@ export default function CountriesSection() {
       color: "from-orange-400 to-blue-500",
       bgColor: "bg-orange-50",
     },
+    {
+      name: "Austria",
+      flag: austriaFlag,
+      tagline: "Alpine education with a rich cultural heritage",
+      image: austriaImg,
+      highlights: [
+        "Free Education",
+        "With or Without IELTS option",
+        "High Visa Success Rate",
+        "English Taught Programs",
+        "1 Year Post Study Visa",
+        "20 hrs/week Part Time Work Allowed"
+      ],
+      stats: {
+        universities: "15+",
+        cost: "€1500+/year",
+        duration: "3-4 years",
+        scholarships: "Free or Schollarship",
+      },
+      color: "from-orange-400 to-blue-500",
+      bgColor: "bg-orange-50",
+    }
   ];
 
   const handleCardClick = (index) => {
@@ -251,9 +275,8 @@ export default function CountriesSection() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         {/* Section Header */}
         <div
-          className={`text-center mb-16 transform transition-all duration-1000 ease-out ${
-            isVisible ? "translate-y-0 opacity-100" : "translate-y-10 opacity-0"
-          }`}
+          className={`text-center mb-16 transform transition-all duration-1000 ease-out ${isVisible ? "translate-y-0 opacity-100" : "translate-y-10 opacity-0"
+            }`}
         >
           <h2 className="text-4xl md:text-5xl font-bold text-blue-900 mb-6">
             Study Destinations
@@ -266,9 +289,8 @@ export default function CountriesSection() {
 
         {/* Carousel */}
         <div
-          className={`mb-16 transform transition-all duration-1000 ease-out delay-300 ${
-            isVisible ? "translate-y-0 opacity-100" : "translate-y-10 opacity-0"
-          }`}
+          className={`mb-16 transform transition-all duration-1000 ease-out delay-300 ${isVisible ? "translate-y-0 opacity-100" : "translate-y-10 opacity-0"
+            }`}
         >
           <Carousel
             setApi={setApi}
@@ -292,10 +314,9 @@ export default function CountriesSection() {
                   <div className="p-1">
                     <div
                       className={`group relative cursor-pointer transition-all duration-500 ease-out transform
-                        ${
-                          activeCountry === index
-                            ? "scale-105 shadow-[0_25px_50px_rgba(59,130,246,0.3)]"
-                            : "shadow-[0_15px_30px_rgba(59,130,246,0.2)] hover:shadow-[0_20px_40px_rgba(59,130,246,0.25)]"
+                        ${activeCountry === index
+                          ? "scale-105 shadow-[0_25px_50px_rgba(59,130,246,0.3)]"
+                          : "shadow-[0_15px_30px_rgba(59,130,246,0.2)] hover:shadow-[0_20px_40px_rgba(59,130,246,0.25)]"
                         }`}
                     >
                       {/* 3D Card Container */}
@@ -311,9 +332,8 @@ export default function CountriesSection() {
                             const centerY = rect.height / 2;
                             const rotateX = (y - centerY) / 20;
                             const rotateY = (centerX - x) / 20;
-                            card.style.transform = `perspective(1200px) rotateX(${
-                              rotateX
-                            }deg) rotateY(${rotateY}deg)`;
+                            card.style.transform = `perspective(1200px) rotateX(${rotateX
+                              }deg) rotateY(${rotateY}deg)`;
                           }}
                           onMouseLeave={(e) => {
                             const card = e.currentTarget;
@@ -344,11 +364,10 @@ export default function CountriesSection() {
                               </div>
 
                               <div
-                                className={`px-3 py-1.5 md:px-4 md:py-2 rounded-full bg-white/90 backdrop-blur-sm ${
-                                  activeCountry === index
-                                    ? "ring-2 ring-white"
-                                    : ""
-                                }`}
+                                className={`px-3 py-1.5 md:px-4 md:py-2 rounded-full bg-white/90 backdrop-blur-sm ${activeCountry === index
+                                  ? "ring-2 ring-white"
+                                  : ""
+                                  }`}
                               >
                                 <span className="text-xs md:text-sm font-bold text-blue-900">
                                   Featured
@@ -400,9 +419,8 @@ export default function CountriesSection() {
 
         {/* Detailed Country Info */}
         <div
-          className={`transform transition-all duration-1000 ease-out delay-500 ${
-            isVisible ? "translate-y-0 opacity-100" : "translate-y-10 opacity-0"
-          }`}
+          className={`transform transition-all duration-1000 ease-out delay-500 ${isVisible ? "translate-y-0 opacity-100" : "translate-y-10 opacity-0"
+            }`}
         >
           <div
             className={`${countries[activeCountry].bgColor} rounded-3xl p-6 md:p-12 
@@ -486,7 +504,7 @@ export default function CountriesSection() {
                 <div className="bg-white rounded-2xl p-4 md:p-6 shadow-[4px_4px_8px_rgba(59,130,246,0.1),-4px_-4px_8px_rgba(255,255,255,0.9)]">
                   <div className="w-10 h-10 md:w-12 md:h-12 bg-purple-100 rounded-xl flex items-center justify-center mb-3 md:mb-4">
                     <Clock
-                    size={20}
+                      size={20}
                       className="md:w-6 md:h-6 text-purple-600"
                     />
                   </div>
