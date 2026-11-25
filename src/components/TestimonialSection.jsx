@@ -80,13 +80,7 @@ const TESTIMONIALS = [
     name: "Samikshya Gurung",
     destination: "University of Naples Parthenope",
   },
-  {
-    id: "7690407005520989447",
-    type: "video",
-    tiktokUrl: "https://www.tiktok.com/@kashyapitaly/video/7690407005520989447",
-    name: "Samikshya Gurung",
-    destination: "University of Naples Parthenope",
-  },
+ 
   {
     id: "7694193586811702536",
     type: "video",
