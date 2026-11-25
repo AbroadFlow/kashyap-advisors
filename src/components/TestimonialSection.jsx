@@ -261,13 +261,13 @@ export default function TestimonialSection() {
     <section
       id="testimonials"
       ref={sectionRef}
-      className="py-24 bg-gradient-to-b from-slate-50 via-blue-50/60 to-white relative overflow-hidden"
+      className="relative -mt-14 overflow-hidden bg-gradient-to-b from-slate-50 via-blue-50/60 to-white pb-14 pt-0 sm:-mt-20 sm:pb-20 lg:pb-24"
     >
       {/* Ambient Glow Orbs */}
-      <div className="absolute inset-0 pointer-events-none overflow-hidden">
-        <div className="absolute -top-24 -left-24 w-96 h-96 bg-blue-400/15 rounded-full blur-3xl" />
-        <div className="absolute top-1/2 -right-24 w-[28rem] h-[28rem] bg-indigo-400/15 rounded-full blur-3xl" />
-        <div className="absolute -bottom-24 left-1/3 w-80 h-80 bg-purple-400/10 rounded-full blur-3xl" />
+      <div className="pointer-events-none absolute inset-0 overflow-hidden">
+        <div className="absolute -left-24 -top-24 h-64 w-64 rounded-full bg-blue-400/15 blur-3xl sm:h-96 sm:w-96" />
+        <div className="absolute -right-24 top-1/2 h-64 w-64 rounded-full bg-indigo-400/15 blur-3xl sm:h-[28rem] sm:w-[28rem]" />
+        <div className="absolute -bottom-24 left-1/3 h-64 w-64 rounded-full bg-purple-400/10 blur-3xl sm:h-80 sm:w-80" />
       </div>
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
@@ -281,30 +281,30 @@ export default function TestimonialSection() {
             href="https://www.tiktok.com/@kashyapitaly"
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-white border border-blue-100 shadow-sm text-blue-700 text-sm font-semibold mb-5 hover:border-blue-300 transition-colors"
+            className="mb-5 inline-flex max-w-full items-center justify-center gap-1.5 rounded-full border border-blue-100 bg-white px-3 py-1.5 text-center text-[11px] font-semibold text-blue-700 shadow-sm transition-colors hover:border-blue-300 sm:gap-2 sm:px-4 sm:text-sm"
           >
-            <span className="w-2 h-2 rounded-full bg-emerald-500 animate-pulse" />
-            <span>@kashyapitaly • Verified Visa &amp; Admission Stories</span>
-            <ExternalLink size={13} className="text-blue-500" />
+            <span className="h-2 w-2 shrink-0 animate-pulse rounded-full bg-emerald-500" />
+            <span className="leading-snug">@kashyapitaly • Verified Visa &amp; Admission Stories</span>
+            <ExternalLink size={13} className="shrink-0 text-blue-500" />
           </a>
 
-          <h2 className="text-4xl md:text-5xl font-extrabold tracking-tight text-slate-900 mb-4">
+          <h2 className="mb-4 text-3xl font-extrabold tracking-tight text-slate-900 sm:text-4xl md:text-5xl">
             Student Success{" "}
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 via-indigo-600 to-purple-600">
               Stories
             </span>
           </h2>
 
-          <p className="text-lg md:text-xl text-slate-600 max-w-2xl mx-auto leading-relaxed mb-8">
+          <p className="mx-auto mb-8 max-w-2xl text-sm leading-relaxed text-slate-600 sm:text-base md:text-xl">
             Real Nepalese students sharing their Italian public university
             admissions, DSU scholarships, and stamped visas.
           </p>
 
           {/* Media Filter Pills */}
-          <div className="inline-flex items-center p-1.5 rounded-2xl bg-white/90 backdrop-blur-md border border-blue-100 shadow-sm">
+          <div className="inline-flex max-w-full flex-wrap items-center justify-center gap-1.5 rounded-2xl border border-blue-100 bg-white/90 p-1.5 shadow-sm backdrop-blur-md sm:gap-2">
             <button
               onClick={() => handleFilterChange("all")}
-              className={`px-4 py-2 rounded-xl text-sm font-semibold transition-all ${
+              className={`rounded-xl px-2.5 py-1.5 text-[11px] font-semibold transition-all sm:px-4 sm:py-2 sm:text-sm ${
                 filter === "all"
                   ? "bg-gradient-to-r from-blue-600 to-indigo-600 text-white shadow-md"
                   : "text-slate-600 hover:text-blue-700"
@@ -314,7 +314,7 @@ export default function TestimonialSection() {
             </button>
             <button
               onClick={() => handleFilterChange("video")}
-              className={`px-4 py-2 rounded-xl text-sm font-semibold inline-flex items-center gap-1.5 transition-all ${
+              className={`inline-flex items-center gap-1 rounded-xl px-2.5 py-1.5 text-[11px] font-semibold transition-all sm:gap-1.5 sm:px-4 sm:py-2 sm:text-sm ${
                 filter === "video"
                   ? "bg-gradient-to-r from-blue-600 to-indigo-600 text-white shadow-md"
                   : "text-slate-600 hover:text-blue-700"
@@ -328,7 +328,7 @@ export default function TestimonialSection() {
             </button>
             <button
               onClick={() => handleFilterChange("photo")}
-              className={`px-4 py-2 rounded-xl text-sm font-semibold inline-flex items-center gap-1.5 transition-all ${
+              className={`inline-flex items-center gap-1 rounded-xl px-2.5 py-1.5 text-[11px] font-semibold transition-all sm:gap-1.5 sm:px-4 sm:py-2 sm:text-sm ${
                 filter === "photo"
                   ? "bg-gradient-to-r from-blue-600 to-indigo-600 text-white shadow-md"
                   : "text-slate-600 hover:text-blue-700"
@@ -346,12 +346,12 @@ export default function TestimonialSection() {
             isVisible ? "translate-y-0 opacity-100" : "translate-y-8 opacity-0"
           }`}
         >
-          <div className="relative flex items-center justify-center gap-4 md:gap-8 py-4">
+          <div className="relative flex items-center justify-center gap-4 py-4 md:gap-8">
             {/* Left Navigation Button */}
             <button
               onClick={prevTestimonial}
               aria-label="Previous video"
-              className="z-20 w-12 h-12 rounded-full bg-white hover:bg-blue-600 text-slate-700 hover:text-white border border-blue-100 flex items-center justify-center transition-all duration-200 shadow-lg shrink-0"
+              className="absolute left-0 top-1/2 z-20 flex h-10 w-10 -translate-y-1/2 shrink-0 items-center justify-center rounded-full border border-blue-100 bg-white text-slate-700 shadow-lg transition-all duration-200 hover:bg-blue-600 hover:text-white sm:static sm:h-12 sm:w-12 sm:translate-y-0"
             >
               <ChevronLeft size={22} />
             </button>
@@ -388,12 +388,12 @@ export default function TestimonialSection() {
             )}
 
             {/* Center Active TikTok Player */}
-            <div className="flex flex-col items-center z-10">
-              <div className="relative p-2.5 sm:p-3 rounded-[2.25rem] bg-gradient-to-b from-slate-800 via-slate-900 to-slate-950 shadow-[0_25px_70px_-15px_rgba(37,99,235,0.35)] ring-1 ring-blue-500/20">
+            <div className="z-10 flex w-full max-w-[325px] flex-col items-center sm:max-w-[335px]">
+              <div className="relative w-full rounded-[2.25rem] bg-gradient-to-b from-slate-800 via-slate-900 to-slate-950 p-2.5 shadow-[0_25px_70px_-15px_rgba(37,99,235,0.35)] ring-1 ring-blue-500/20 sm:p-3">
                 {/* Top Speaker Notch */}
                 <div className="w-16 h-1 bg-slate-700 rounded-full mx-auto mb-2" />
 
-                <div className="relative w-[325px] sm:w-[335px] min-h-[580px] rounded-[1.5rem] overflow-hidden bg-white flex items-center justify-center">
+                <div className="relative flex min-h-[520px] w-full items-center justify-center overflow-hidden rounded-[1.5rem] bg-white sm:min-h-[580px]">
                   {/* Top Media Badge */}
                   <div className="absolute top-3 left-3 z-10 flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-black/75 backdrop-blur-md text-white text-[11px] font-semibold border border-white/10 pointer-events-none">
                     {active.type === "video" ? (
@@ -424,8 +424,9 @@ export default function TestimonialSection() {
                       cite={active.tiktokUrl}
                       data-video-id={active.id}
                       style={{
+                        width: "100%",
                         maxWidth: "335px",
-                        minWidth: "320px",
+                        minWidth: 0,
                         margin: 0,
                       }}
                     >
@@ -449,7 +450,7 @@ export default function TestimonialSection() {
                 href={active.tiktokUrl}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="mt-4 inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-slate-900 hover:bg-blue-600 text-white text-xs font-semibold shadow-sm transition-colors duration-200"
+                className="mt-4 inline-flex max-w-full items-center gap-2 rounded-full bg-slate-900 px-4 py-1.5 text-center text-xs font-semibold text-white shadow-sm transition-colors duration-200 hover:bg-blue-600"
               >
                 <span>Open on TikTok (@kashyapitaly)</span>
                 <ExternalLink size={12} />
@@ -491,7 +492,7 @@ export default function TestimonialSection() {
             <button
               onClick={nextTestimonial}
               aria-label="Next video"
-              className="z-20 w-12 h-12 rounded-full bg-white hover:bg-blue-600 text-slate-700 hover:text-white border border-blue-100 flex items-center justify-center transition-all duration-200 shadow-lg shrink-0"
+              className="absolute right-0 top-1/2 z-20 flex h-10 w-10 -translate-y-1/2 shrink-0 items-center justify-center rounded-full border border-blue-100 bg-white text-slate-700 shadow-lg transition-all duration-200 hover:bg-blue-600 hover:text-white sm:static sm:h-12 sm:w-12 sm:translate-y-0"
             >
               <ChevronRight size={22} />
             </button>

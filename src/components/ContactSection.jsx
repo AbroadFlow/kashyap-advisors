@@ -117,7 +117,7 @@ export default function ContactSection() {
     {
       icon: Phone,
       title: "Call Us",
-      details: ["+977 01-4971745", "+977 01-4971745"],
+      details: ["9709029678 ", "9709029673"],
       color: "bg-green-500",
       lightColor: "bg-green-50",
       borderColor: "border-green-200",
@@ -173,35 +173,35 @@ export default function ContactSection() {
     <section
       id="contact"
       ref={sectionRef}
-      className="py-24 bg-gradient-to-br from-white to-blue-50 relative overflow-hidden"
+      className="relative -mt-14 overflow-hidden bg-gradient-to-br from-white to-blue-50 pb-0 pt-0 sm:-mt-20 lg:-mt-24"
     >
       {/* Background Elements */}
-      <div className="absolute inset-0">
-        <div className="absolute top-32 right-20 w-64 h-64 bg-blue-200 rounded-full opacity-10 blur-3xl"></div>
-        <div className="absolute bottom-32 left-20 w-80 h-80 bg-purple-200 rounded-full opacity-10 blur-3xl"></div>
+      <div className="pointer-events-none absolute inset-0">
+        <div className="absolute -right-20 top-20 h-48 w-48 rounded-full bg-blue-200 opacity-10 blur-3xl sm:right-20 sm:top-32 sm:h-64 sm:w-64"></div>
+        <div className="absolute -bottom-20 -left-20 h-56 w-56 rounded-full bg-purple-200 opacity-10 blur-3xl sm:bottom-32 sm:left-20 sm:h-80 sm:w-80"></div>
       </div>
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         {/* Section Header */}
         <div
-          className={`text-center mb-16 transform transition-all duration-1000 ease-out ${
+          className={`mb-8 transform text-center transition-all duration-1000 ease-out sm:mb-12 lg:mb-16 ${
             isVisible ? "translate-y-0 opacity-100" : "translate-y-10 opacity-0"
           }`}
         >
-          <h2 className="text-4xl md:text-5xl font-bold text-blue-900 mb-6">
+          <h2 className="mb-5 text-3xl font-bold text-blue-900 sm:mb-6 sm:text-4xl md:text-5xl">
             Get In Touch
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-purple-600">
               {" "}
               With Us
             </span>
           </h2>
-          <p className="text-xl text-blue-700 max-w-3xl mx-auto leading-relaxed">
+          <p className="mx-auto max-w-3xl text-sm leading-relaxed text-blue-700 sm:text-base md:text-xl">
             Ready to start your educational journey abroad? Contact us today for
             a free consultation and let's make your dreams come true.
           </p>
         </div>
 
-        <div className="grid grid-cols-1 lg:grid-cols-3 gap-12">
+        <div className="grid grid-cols-1 gap-8 sm:gap-10 lg:grid-cols-3 lg:gap-12">
           {/* Contact Information */}
           <div
             className={`lg:col-span-1 transform transition-all duration-1000 ease-out delay-200 ${
@@ -211,7 +211,7 @@ export default function ContactSection() {
             }`}
           >
             <div className="space-y-6">
-              <h3 className="text-2xl font-bold text-blue-900 mb-8">
+              <h3 className="mb-5 text-xl font-bold text-blue-900 sm:mb-8 sm:text-2xl">
                 Contact Information
               </h3>
 
@@ -221,24 +221,24 @@ export default function ContactSection() {
                   <div
                     key={index}
                     className={`
-                      group p-6 rounded-2xl transition-all duration-300 cursor-pointer
+                      group cursor-pointer rounded-2xl p-5 transition-all duration-300 sm:p-6
                       ${info.lightColor} ${info.borderColor} border
                       shadow-[6px_6px_12px_rgba(59,130,246,0.08),-6px_-6px_12px_rgba(255,255,255,0.8)]
                       hover:shadow-[8px_8px_16px_rgba(59,130,246,0.12),-8px_-8px_16px_rgba(255,255,255,0.9)]
                       hover:scale-[1.02]
                     `}
                   >
-                    <div className="flex items-start space-x-4">
+                    <div className="flex items-start space-x-3 sm:space-x-4">
                       <div
                         className={`
-                        ${info.color} w-12 h-12 rounded-xl flex items-center justify-center
+                        ${info.color} flex h-11 w-11 shrink-0 items-center justify-center rounded-xl sm:h-12 sm:w-12
                         shadow-[4px_4px_8px_rgba(59,130,246,0.15),-4px_-4px_8px_rgba(255,255,255,0.9)]
                         group-hover:scale-110 transition-transform duration-300
                       `}
                       >
                         <Icon size={24} className="text-white" />
                       </div>
-                      <div className="flex-1">
+                      <div className="min-w-0 flex-1">
                         <h4 className="font-bold text-blue-900 mb-2">
                           {info.title}
                         </h4>
@@ -246,7 +246,7 @@ export default function ContactSection() {
                           {info.details.map((detail, detailIndex) => (
                             <p
                               key={detailIndex}
-                              className="text-blue-700 text-sm"
+                              className="break-words text-xs text-blue-700 sm:text-sm"
                             >
                               {detail}
                             </p>
@@ -259,32 +259,32 @@ export default function ContactSection() {
               })}
 
               {/* Quick CTA */}
-              <div className="relative overflow-hidden bg-gradient-to-br from-blue-600 to-blue-700 hover:shadow-xl hover:shadow-blue-500/20 rounded-2xl p-6 text-white mt-8 transition-all duration-300 group">
+              <div className="group relative mt-6 overflow-hidden rounded-2xl bg-gradient-to-br from-blue-600 to-blue-700 p-5 text-white transition-all duration-300 hover:shadow-xl hover:shadow-blue-500/20 sm:mt-8 sm:p-6">
                 {/* Decorative elements */}
                 <div className="absolute top-0 right-0 w-32 h-32 bg-blue-500/20 rounded-full blur-3xl -mr-16 -mt-16"></div>
                 <div className="absolute bottom-0 left-0 w-24 h-24 bg-orange-200/10 rounded-full blur-2xl -ml-12 -mb-12"></div>
 
                 <div className="relative z-10">
-                  <h4 className="text-xl font-bold mb-2">
+                  <h4 className="mb-2 text-lg font-bold sm:text-xl">
                     Need Immediate Assistance?
                   </h4>
-                  <p className="text-blue-100 text-sm mb-6 leading-relaxed">
+                  <p className="mb-5 text-xs leading-relaxed text-blue-100 sm:mb-6 sm:text-sm">
                     Our support team is ready to help you with urgent queries or
                     emergency support.
                   </p>
 
                   <a
-                    href="tel:+9779709029676"
-                    className="inline-flex items-center justify-center gap-2 w-full bg-white text-blue-600 px-6 py-3 rounded-xl font-semibold hover:bg-orange-50 hover:scale-[1.02] active:scale-[0.98] transition-all duration-300 shadow-lg shadow-blue-900/20 text-sm"
+                    href="tel:+9779709029678"
+                    className="inline-flex w-full items-center justify-center gap-2 rounded-xl bg-white px-4 py-3 text-xs font-semibold text-blue-600 shadow-lg shadow-blue-900/20 transition-all duration-300 hover:bg-orange-50 hover:scale-[1.02] active:scale-[0.98] sm:px-6 sm:text-sm"
                   >
                     <svg
-                      className="w-5 h-5"
+                      className="h-5 w-5 shrink-0"
                       fill="currentColor"
                       viewBox="0 0 20 20"
                     >
                       <path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z" />
                     </svg>
-                    Call Now: +977 9709029676
+                    Call Now: +977 9709029678
                   </a>
                 </div>
               </div>
@@ -299,7 +299,7 @@ export default function ContactSection() {
                 : "translate-y-10 opacity-0"
             }`}
           >
-            <div className="bg-white rounded-3xl shadow-[0_20px_40px_rgba(59,130,246,0.1)] border border-blue-100 p-8 md:p-12 relative overflow-hidden">
+            <div className="relative overflow-hidden rounded-2xl border border-blue-100 bg-white p-5 shadow-[0_20px_40px_rgba(59,130,246,0.1)] sm:rounded-3xl sm:p-8 md:p-12">
               {/* Background Pattern */}
               <div className="absolute inset-0 opacity-5">
                 <div
@@ -312,18 +312,18 @@ export default function ContactSection() {
               </div>
 
               <div className="relative z-10">
-                <h3 className="text-2xl font-bold text-blue-900 mb-2">
+                <h3 className="mb-2 text-xl font-bold text-blue-900 sm:text-2xl">
                   Send us a Message
                 </h3>
-                <p className="text-blue-600 mb-8">
+                <p className="mb-6 text-sm text-blue-600 sm:mb-8 sm:text-base">
                   Fill out the form below and we'll get back to you within 24
                   hours.
                 </p>
 
                 {/* Success Message */}
                 {isSubmitted && (
-                  <div className="mb-6 p-4 bg-green-50 border border-green-200 rounded-xl flex items-center space-x-3 animate-fade-in">
-                    <CheckCircle size={24} className="text-green-600" />
+                  <div className="mb-6 flex items-center space-x-3 rounded-xl border border-green-200 bg-green-50 p-3 animate-fade-in sm:p-4">
+                    <CheckCircle size={24} className="shrink-0 text-green-600" />
                     <div>
                       <p className="text-green-800 font-semibold">
                         Message Sent Successfully!
@@ -337,8 +337,8 @@ export default function ContactSection() {
 
                 {/* Error Message */}
                 {error && (
-                  <div className="mb-6 p-4 bg-red-50 border border-red-200 rounded-xl flex items-center space-x-3 animate-fade-in">
-                    <AlertCircle size={24} className="text-red-600" />
+                  <div className="mb-6 flex items-center space-x-3 rounded-xl border border-red-200 bg-red-50 p-3 animate-fade-in sm:p-4">
+                    <AlertCircle size={24} className="shrink-0 text-red-600" />
                     <div>
                       <p className="text-red-800 font-semibold">
                         Submission Failed
@@ -348,8 +348,8 @@ export default function ContactSection() {
                   </div>
                 )}
 
-                <form onSubmit={handleSubmit} className="space-y-6">
-                  <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <form onSubmit={handleSubmit} className="space-y-5 sm:space-y-6">
+                  <div className="grid grid-cols-1 gap-5 sm:gap-6 md:grid-cols-2">
                     {/* Name Field */}
                     <div>
                       <label className="block text-sm font-semibold text-blue-900 mb-2">
@@ -362,12 +362,12 @@ export default function ContactSection() {
                           value={formData.name}
                           onChange={handleInputChange}
                           required
-                          className="w-full px-4 py-3 pl-12 border border-blue-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-all duration-300 bg-blue-50/50"
+                          className="w-full rounded-xl border border-blue-200 bg-blue-50/50 px-3 py-2.5 pl-11 text-sm transition-all duration-300 focus:border-blue-500 focus:outline-none focus:ring-2 focus:ring-blue-500 sm:px-4 sm:py-3 sm:pl-12 sm:text-base"
                           placeholder="Enter your full name"
                         />
                         <User
                           size={20}
-                          className="absolute left-4 top-1/2 transform -translate-y-1/2 text-blue-400"
+                          className="absolute left-3 top-1/2 -translate-y-1/2 transform text-blue-400 sm:left-4"
                         />
                       </div>
                     </div>
@@ -384,18 +384,18 @@ export default function ContactSection() {
                           value={formData.email}
                           onChange={handleInputChange}
                           required
-                          className="w-full px-4 py-3 pl-12 border border-blue-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-all duration-300 bg-blue-50/50"
+                          className="w-full rounded-xl border border-blue-200 bg-blue-50/50 px-3 py-2.5 pl-11 text-sm transition-all duration-300 focus:border-blue-500 focus:outline-none focus:ring-2 focus:ring-blue-500 sm:px-4 sm:py-3 sm:pl-12 sm:text-base"
                           placeholder="Enter your email"
                         />
                         <Mail
                           size={20}
-                          className="absolute left-4 top-1/2 transform -translate-y-1/2 text-blue-400"
+                          className="absolute left-3 top-1/2 -translate-y-1/2 transform text-blue-400 sm:left-4"
                         />
                       </div>
                     </div>
                   </div>
 
-                  <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                  <div className="grid grid-cols-1 gap-5 sm:gap-6 md:grid-cols-2">
                     {/* Phone Field */}
                     <div>
                       <label className="block text-sm font-semibold text-blue-900 mb-2">
@@ -408,12 +408,12 @@ export default function ContactSection() {
                           value={formData.phone}
                           onChange={handleInputChange}
                           required
-                          className="w-full px-4 py-3 pl-12 border border-blue-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-all duration-300 bg-blue-50/50"
+                          className="w-full rounded-xl border border-blue-200 bg-blue-50/50 px-3 py-2.5 pl-11 text-sm transition-all duration-300 focus:border-blue-500 focus:outline-none focus:ring-2 focus:ring-blue-500 sm:px-4 sm:py-3 sm:pl-12 sm:text-base"
                           placeholder="+977 9876543210"
                         />
                         <Phone
                           size={20}
-                          className="absolute left-4 top-1/2 transform -translate-y-1/2 text-blue-400"
+                          className="absolute left-3 top-1/2 -translate-y-1/2 transform text-blue-400 sm:left-4"
                         />
                       </div>
                     </div>
@@ -428,7 +428,7 @@ export default function ContactSection() {
                         value={formData.country}
                         onChange={handleInputChange}
                         required
-                        className="w-full px-4 py-3 border border-blue-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-all duration-300 bg-blue-50/50"
+                        className="w-full rounded-xl border border-blue-200 bg-blue-50/50 px-3 py-2.5 text-sm transition-all duration-300 focus:border-blue-500 focus:outline-none focus:ring-2 focus:ring-blue-500 sm:px-4 sm:py-3 sm:text-base"
                       >
                         <option value="">Select a country</option>
                         {countries.map((country) => (
@@ -450,7 +450,7 @@ export default function ContactSection() {
                       value={formData.course}
                       onChange={handleInputChange}
                       required
-                      className="w-full px-4 py-3 border border-blue-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-all duration-300 bg-blue-50/50"
+                        className="w-full rounded-xl border border-blue-200 bg-blue-50/50 px-3 py-2.5 text-sm transition-all duration-300 focus:border-blue-500 focus:outline-none focus:ring-2 focus:ring-blue-500 sm:px-4 sm:py-3 sm:text-base"
                     >
                       <option value="">Select your course</option>
                       {courses.map((course) => (
@@ -472,13 +472,13 @@ export default function ContactSection() {
                         value={formData.message}
                         onChange={handleInputChange}
                         rows={4}
-                        className="w-full px-4 py-3 pl-12 border border-blue-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-all duration-300 bg-blue-50/50 resize-none"
+                        className="w-full resize-none rounded-xl border border-blue-200 bg-blue-50/50 px-3 py-2.5 pl-11 text-sm transition-all duration-300 focus:border-blue-500 focus:outline-none focus:ring-2 focus:ring-blue-500 sm:px-4 sm:py-3 sm:pl-12 sm:text-base"
                         placeholder="Tell us about your educational goals and any specific questions you have..."
                       />
-                      <MessageSquare
-                        size={20}
-                        className="absolute left-4 top-4 text-blue-400"
-                      />
+                        <MessageSquare
+                          size={20}
+                          className="absolute left-3 top-3.5 text-blue-400 sm:left-4 sm:top-4"
+                        />
                     </div>
                   </div>
 
@@ -487,7 +487,7 @@ export default function ContactSection() {
                     type="submit"
                     disabled={isSubmitting}
                     className={`
-                      w-full px-8 py-4 rounded-xl font-semibold text-lg transition-all duration-300
+                      w-full rounded-xl px-6 py-3.5 text-base font-semibold transition-all duration-300 sm:px-8 sm:py-4 sm:text-lg
                       ${
                         isSubmitting
                           ? "bg-blue-400 cursor-not-allowed"
@@ -498,7 +498,7 @@ export default function ContactSection() {
                   >
                     {isSubmitting ? (
                       <>
-                        <div className="w-5 h-5 border-2 border-white border-t-transparent rounded-full animate-spin"></div>
+                        <div className="h-5 w-5 shrink-0 animate-spin rounded-full border-2 border-white border-t-transparent"></div>
                         <span>Sending...</span>
                       </>
                     ) : (
