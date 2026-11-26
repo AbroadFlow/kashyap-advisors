@@ -1,4 +1,4 @@
 declare module "*.jsx" {
-  const Component: any;
+  const Component: import("react").ComponentType;
   export default Component;
 }

@@ -1,6 +1,7 @@
 import AnnouncementBanner from "../components/AnnouncementBanner";  
 import Header from "@/components/Header";
 import HeroSection from "@/components/HeroSection";
+import StatsSection from "@/components/StatsSection";
 import ServicesSection from "@/components/ServicesSection";
 import CountriesSection from "@/components/CountriesSection";
 import FeaturesSection from "@/components/FeaturesSection";
@@ -18,8 +19,11 @@ export default function HomePage() {
       {/* Header - Navigation */}
       <Header />
 
-      {/* Hero Section - Italy imagery and main CTA */}
+      {/* Hero Section - Italy-first positioning with moving visa approval photos */}
       <HeroSection />
+
+      {/* Track record - sits directly below the hero */}
+      <StatsSection />
 
       {/* Services Section - What we offer */}
       <ServicesSection />

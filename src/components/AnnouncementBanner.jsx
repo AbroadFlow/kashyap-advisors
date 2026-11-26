@@ -32,7 +32,7 @@ export default function AnnouncementBanner() {
             ))}
           </div>
           <span className="text-sm md:text-base font-medium">
-            🎉 New 2025 September Intake already Started! Giving out free IELTS class to all the early bird applicants. 
+            Italy 2026 September Intake is open — free IELTS classes for early applicants.
           </span>
         </div>
 
